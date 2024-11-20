@@ -1,0 +1,114 @@
+/* General Layout */
+/* Full page layout for Dashboard */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f6f8;
+  height: calc(100% - 75px); /* Adjust for navbar height */
+  min-height: calc(100vh - 75px); /* Ensure full viewport height */
+  box-sizing: border-box;
+}
+
+/* Styling for main sections */
+aside, main {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Allow scrolling within sections if content overflows */
+}
+
+/* Suggested Repositories */
+aside h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+aside div {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+aside div h4 {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Main Repositories Section */
+main h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#search {
+  margin-bottom: 20px;
+}
+
+#search input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Repository Card */
+main div {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+main div h4 {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Upcoming Events */
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+aside ul li p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Hover and Focus Effects */
+aside div:hover, main div:hover {
+  background-color: #f9f9f9;
+}
+
+#search input:focus {
+  border-color: #333;
+  outline: none;
+}
+
+/* Responsive Design for Dashboard */
+@media (max-width: 768px) {
+  #dashboard {
+    grid-template-columns: 1fr;
+  }
+}

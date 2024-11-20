@@ -1,0 +1,53 @@
+/* Navbar styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+  height: 50px;
+  border-radius: 100%;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav h3 {
+  margin-left: 15px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+nav p {
+  margin-left: 50px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav h3:hover,
+nav p:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments for Navbar */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav p {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
